@@ -1,0 +1,438 @@
+1 Machine Learning
+------------------
+
+What is the main goal of Machine Learning?
+
+A) To follow predefined rules
+B) To learn patterns from data
+C) To replace databases
+D) To increase hardware speed
+✅ Answer: B
+
+Machine Learning is a subset of:
+
+A) Data Science
+B) Computer Networks
+C) Artificial Intelligence
+D) Software Engineering
+✅ Answer: C
+
+Which of the following best represents the ML workflow?
+
+A) Code → Output → Debug
+B) Data → Model → Prediction → Improvement
+C) Input → Compile → Execute
+D) Design → Deploy → Test
+✅ Answer: B
+
+Which is NOT a real-world application of Machine Learning?
+
+A) Spam filtering
+B) Fraud detection
+C) Manual data entry
+D) Recommendation systems
+✅ Answer: C
+
+Model generalization refers to:
+
+A) Memorizing training data
+B) Performing well on unseen data
+C) Increasing model size
+D) Reducing dataset size
+✅ Answer: B
+
+
+2 Deep Learning
+---------------
+
+Deep Learning is a subset of Machine Learning that uses neural networks with multiple layers.
+
+A) Artificial Intelligence
+B) Machine Learning
+C) Data Mining
+D) Software Testing
+✅ Answer: B
+
+Why is Deep Learning called "deep"?
+
+A) Uses deep databases
+B) Uses many hidden layers
+C) Uses cloud computing
+D) Uses complex math only
+✅ Answer: B
+
+Deep Learning performs best with:
+
+A) Small datasets
+B) No data
+C) Large datasets
+D) Rule-based systems
+✅ Answer: C
+
+Which hardware accelerates Deep Learning training?
+
+A) CPU only
+B) RAM
+C) GPU
+D) Hard Disk
+✅ Answer: C
+
+One major drawback of Deep Learning is:
+
+A) Low accuracy
+B) High interpretability
+C) High computational cost
+D) Limited applications
+✅ Answer: C
+
+
+3 Neural Networks
+-----------------
+
+Neural Networks are inspired by:
+
+A) Computer architecture
+B) Human brain
+C) Operating systems
+D) Databases
+✅ Answer: B
+
+Which component adjusts learning in a neural network?
+
+A) Input layer
+B) Weights
+C) Dataset
+D) Output labels
+✅ Answer: B
+
+What is the purpose of an activation function?
+
+A) Store data
+B) Add non-linearity
+C) Increase dataset size
+D) Reduce memory usage
+✅ Answer: B
+
+CNNs are mainly used for:
+
+A) Text data
+B) Time series
+C) Image processing
+D) Tabular data
+✅ Answer: C
+
+Which is a disadvantage of neural networks?
+
+A) Cannot learn patterns
+B) Hard to debug
+C) Low accuracy
+D) No real-world use
+✅ Answer: B
+
+
+4 Supervised Learning
+--------------------
+
+Supervised Learning uses:
+
+A) Unlabeled data
+B) Random data
+C) Labeled data
+D) No data
+✅ Answer: C
+
+Which task belongs to supervised learning?
+
+A) Clustering
+B) Classification
+C) Dimensionality reduction
+D) Association
+✅ Answer: B
+
+Which algorithm is supervised?
+
+A) K-Means
+B) PCA
+C) Decision Tree
+D) Apriori
+✅ Answer: C
+
+Logistic Regression is used for:
+
+A) Regression only
+B) Classification
+C) Clustering
+D) Reinforcement learning
+✅ Answer: B
+
+Supervised learning is commonly used in:
+
+A) Customer segmentation
+B) Anomaly detection
+C) Price prediction
+D) Data compression
+✅ Answer: C
+
+
+5 Unsupervised Learning
+----------------------
+
+Unsupervised learning works with:
+
+A) Labeled data
+B) Unlabeled data
+C) Test data only
+D) Validation data
+✅ Answer: B
+
+Which is an unsupervised algorithm?
+
+A) Linear Regression
+B) Logistic Regression
+C) K-Means
+D) SVM
+✅ Answer: C
+
+The main goal of clustering is to:
+
+A) Predict output
+B) Group similar data
+C) Reduce errors
+D) Increase accuracy
+✅ Answer: B
+
+PCA is used for:
+
+A) Classification
+B) Regression
+C) Dimensionality reduction
+D) Reinforcement learning
+✅ Answer: C
+
+Unsupervised learning is useful for:
+
+A) Spam filtering
+B) Customer segmentation
+C) Price prediction
+D) Sentiment analysis
+✅ Answer: B
+
+
+6 Reinforcement Learning
+-----------------------
+
+Reinforcement Learning is based on:
+
+A) Labels
+B) Rules
+C) Rewards and penalties
+D) Clusters
+✅ Answer: C
+
+Who takes actions in Reinforcement Learning?
+
+A) Dataset
+B) Model
+C) Agent
+D) Server
+✅ Answer: C
+
+What is the goal of Reinforcement Learning?
+
+A) Minimize loss
+B) Maximize reward
+C) Reduce data
+D) Increase labels
+✅ Answer: B
+
+Reinforcement learning is best suited for:
+
+A) Static problems
+B) Sequential decision-making
+C) Data labeling
+D) Data cleaning
+✅ Answer: B
+
+Example application of Reinforcement Learning:
+
+A) Email spam filter
+B) Image classification
+C) Game AI
+D) Linear regression
+✅ Answer: C
+
+
+7 Overfitting
+-------------
+
+Overfitting occurs when:
+
+A) Model is too simple
+B) Model memorizes training data
+C) Model ignores data
+D) Dataset is small
+✅ Answer: B
+
+Overfitted models perform:
+
+A) Poor on training, good on testing
+B) Good on both
+C) Good on training, poor on testing
+D) Poor on both
+✅ Answer: C
+
+Which causes overfitting?
+
+A) Simple model
+B) Too much regularization
+C) Complex model
+D) Small epochs
+✅ Answer: C
+
+Which technique reduces overfitting?
+
+A) Dropout
+B) Increasing complexity
+C) Removing validation
+D) Ignoring test data
+✅ Answer: A
+
+Overfitting affects:
+
+A) Training accuracy
+B) Generalization
+C) Hardware
+D) Dataset size
+✅ Answer: B
+
+
+8 Underfitting
+--------------
+
+Underfitting occurs when:
+
+A) Model is too complex
+B) Model is too simple
+C) Data is large
+D) GPU is used
+✅ Answer: B
+
+Underfitting leads to:
+
+A) High accuracy
+B) Poor training and testing performance
+C) Over-optimization
+D) Memorization
+✅ Answer: B
+
+Underfitting is associated with:
+
+A) High variance
+B) High bias
+C) Regularization
+D) Noise
+✅ Answer: B
+
+One way to fix underfitting is:
+
+A) Reduce features
+B) Increase model complexity
+C) Reduce training time
+D) Use less data
+✅ Answer: B
+
+Underfitting means the model:
+
+A) Learns noise
+B) Learns patterns well
+C) Fails to learn patterns
+D) Over-generalizes
+✅ Answer: C
+
+
+9 Bias vs Variance
+-----------------
+
+Bias refers to:
+
+A) Error due to complex model
+B) Error due to simple assumptions
+C) Random noise
+D) Hardware failure
+✅ Answer: B
+
+Variance refers to:
+
+A) Error due to data scarcity
+B) Error due to sensitivity to data
+C) Error due to bias
+D) Error due to labels
+✅ Answer: B
+
+High bias leads to:
+
+A) Overfitting
+B) Underfitting
+C) High variance
+D) High accuracy
+✅ Answer: B
+
+High variance leads to:
+
+A) Underfitting
+B) Good generalization
+C) Overfitting
+D) Simple models
+✅ Answer: C
+
+The goal is to:
+
+A) Maximize bias
+B) Maximize variance
+C) Balance bias and variance
+D) Remove both
+✅ Answer: C
+
+
+10 Model Evaluation
+------------------
+
+Model evaluation checks:
+
+A) Training speed
+B) Memory usage
+C) Performance on unseen data
+D) Dataset size
+✅ Answer: C
+
+Which metric measures overall correctness?
+
+A) Precision
+B) Recall
+C) Accuracy
+D) F1-score
+✅ Answer: C
+
+Precision focuses on:
+
+A) False negatives
+B) True positives
+C) Correct positive predictions
+D) Total predictions
+✅ Answer: C
+
+Recall focuses on:
+
+A) Identifying all actual positives
+B) Reducing false positives
+C) Increasing accuracy
+D) Reducing loss
+✅ Answer: A
+
+Cross-validation helps to:
+
+A) Increase bias
+B) Reduce variance
+C) Improve generalization
+D) Increase training time
+✅ Answer: C

@@ -1,0 +1,531 @@
+{
+  "Machine Learning": [
+    {
+      "question": "What is the main goal of Machine Learning?",
+      "options": {
+        "A": "To follow predefined rules",
+        "B": "To learn patterns from data",
+        "C": "To replace databases",
+        "D": "To increase hardware speed"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Machine Learning is a subset of:",
+      "options": {
+        "A": "Data Science",
+        "B": "Computer Networks",
+        "C": "Artificial Intelligence",
+        "D": "Software Engineering"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which of the following best represents the ML workflow?",
+      "options": {
+        "A": "Code → Output → Debug",
+        "B": "Data → Model → Prediction → Improvement",
+        "C": "Input → Compile → Execute",
+        "D": "Design → Deploy → Test"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which is NOT a real-world application of Machine Learning?",
+      "options": {
+        "A": "Spam filtering",
+        "B": "Fraud detection",
+        "C": "Manual data entry",
+        "D": "Recommendation systems"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Model generalization refers to:",
+      "options": {
+        "A": "Memorizing training data",
+        "B": "Performing well on unseen data",
+        "C": "Increasing model size",
+        "D": "Reducing dataset size"
+      },
+      "answer": "B"
+    }
+  ],
+
+  "Deep Learning": [
+    {
+      "question": "Deep Learning is a subset of Machine Learning that uses neural networks with multiple layers.",
+      "options": {
+        "A": "Artificial Intelligence",
+        "B": "Machine Learning",
+        "C": "Data Mining",
+        "D": "Software Testing"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Why is Deep Learning called \"deep\"?",
+      "options": {
+        "A": "Uses deep databases",
+        "B": "Uses many hidden layers",
+        "C": "Uses cloud computing",
+        "D": "Uses complex math only"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Deep Learning performs best with:",
+      "options": {
+        "A": "Small datasets",
+        "B": "No data",
+        "C": "Large datasets",
+        "D": "Rule-based systems"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which hardware accelerates Deep Learning training?",
+      "options": {
+        "A": "CPU only",
+        "B": "RAM",
+        "C": "GPU",
+        "D": "Hard Disk"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "One major drawback of Deep Learning is:",
+      "options": {
+        "A": "Low accuracy",
+        "B": "High interpretability",
+        "C": "High computational cost",
+        "D": "Limited applications"
+      },
+      "answer": "C"
+    }
+  ],
+
+  "Neural Networks": [
+    {
+      "question": "Neural Networks are inspired by:",
+      "options": {
+        "A": "Computer architecture",
+        "B": "Human brain",
+        "C": "Operating systems",
+        "D": "Databases"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which component adjusts learning in a neural network?",
+      "options": {
+        "A": "Input layer",
+        "B": "Weights",
+        "C": "Dataset",
+        "D": "Output labels"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "What is the purpose of an activation function?",
+      "options": {
+        "A": "Store data",
+        "B": "Add non-linearity",
+        "C": "Increase dataset size",
+        "D": "Reduce memory usage"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "CNNs are mainly used for:",
+      "options": {
+        "A": "Text data",
+        "B": "Time series",
+        "C": "Image processing",
+        "D": "Tabular data"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which is a disadvantage of neural networks?",
+      "options": {
+        "A": "Cannot learn patterns",
+        "B": "Hard to debug",
+        "C": "Low accuracy",
+        "D": "No real-world use"
+      },
+      "answer": "B"
+    }
+  ],
+
+  "Supervised Learning": [
+    {
+      "question": "Supervised Learning uses:",
+      "options": {
+        "A": "Unlabeled data",
+        "B": "Random data",
+        "C": "Labeled data",
+        "D": "No data"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which task belongs to supervised learning?",
+      "options": {
+        "A": "Clustering",
+        "B": "Classification",
+        "C": "Dimensionality reduction",
+        "D": "Association"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which algorithm is supervised?",
+      "options": {
+        "A": "K-Means",
+        "B": "PCA",
+        "C": "Decision Tree",
+        "D": "Apriori"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Logistic Regression is used for:",
+      "options": {
+        "A": "Regression only",
+        "B": "Classification",
+        "C": "Clustering",
+        "D": "Reinforcement learning"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Supervised learning is commonly used in:",
+      "options": {
+        "A": "Customer segmentation",
+        "B": "Anomaly detection",
+        "C": "Price prediction",
+        "D": "Data compression"
+      },
+      "answer": "C"
+    }
+  ],
+
+  "Unsupervised Learning": [
+    {
+      "question": "Unsupervised learning works with:",
+      "options": {
+        "A": "Labeled data",
+        "B": "Unlabeled data",
+        "C": "Test data only",
+        "D": "Validation data"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which is an unsupervised algorithm?",
+      "options": {
+        "A": "Linear Regression",
+        "B": "Logistic Regression",
+        "C": "K-Means",
+        "D": "SVM"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "The main goal of clustering is to:",
+      "options": {
+        "A": "Predict output",
+        "B": "Group similar data",
+        "C": "Reduce errors",
+        "D": "Increase accuracy"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "PCA is used for:",
+      "options": {
+        "A": "Classification",
+        "B": "Regression",
+        "C": "Dimensionality reduction",
+        "D": "Reinforcement learning"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Unsupervised learning is useful for:",
+      "options": {
+        "A": "Spam filtering",
+        "B": "Customer segmentation",
+        "C": "Price prediction",
+        "D": "Sentiment analysis"
+      },
+      "answer": "B"
+    }
+  ],
+
+  "Reinforcement Learning": [
+    {
+      "question": "Reinforcement Learning is based on:",
+      "options": {
+        "A": "Labels",
+        "B": "Rules",
+        "C": "Rewards and penalties",
+        "D": "Clusters"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Who takes actions in Reinforcement Learning?",
+      "options": {
+        "A": "Dataset",
+        "B": "Model",
+        "C": "Agent",
+        "D": "Server"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "What is the goal of Reinforcement Learning?",
+      "options": {
+        "A": "Minimize loss",
+        "B": "Maximize reward",
+        "C": "Reduce data",
+        "D": "Increase labels"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Reinforcement learning is best suited for:",
+      "options": {
+        "A": "Static problems",
+        "B": "Sequential decision-making",
+        "C": "Data labeling",
+        "D": "Data cleaning"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Example application of Reinforcement Learning:",
+      "options": {
+        "A": "Email spam filter",
+        "B": "Image classification",
+        "C": "Game AI",
+        "D": "Linear regression"
+      },
+      "answer": "C"
+    }
+  ],
+
+  "Overfitting": [
+    {
+      "question": "Overfitting occurs when:",
+      "options": {
+        "A": "Model is too simple",
+        "B": "Model memorizes training data",
+        "C": "Model ignores data",
+        "D": "Dataset is small"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Overfitted models perform:",
+      "options": {
+        "A": "Poor on training, good on testing",
+        "B": "Good on both",
+        "C": "Good on training, poor on testing",
+        "D": "Poor on both"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which causes overfitting?",
+      "options": {
+        "A": "Simple model",
+        "B": "Too much regularization",
+        "C": "Complex model",
+        "D": "Small epochs"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which technique reduces overfitting?",
+      "options": {
+        "A": "Dropout",
+        "B": "Increasing complexity",
+        "C": "Removing validation",
+        "D": "Ignoring test data"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Overfitting affects:",
+      "options": {
+        "A": "Training accuracy",
+        "B": "Generalization",
+        "C": "Hardware",
+        "D": "Dataset size"
+      },
+      "answer": "B"
+    }
+  ],
+
+  "Underfitting": [
+    {
+      "question": "Underfitting occurs when:",
+      "options": {
+        "A": "Model is too complex",
+        "B": "Model is too simple",
+        "C": "Data is large",
+        "D": "GPU is used"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Underfitting leads to:",
+      "options": {
+        "A": "High accuracy",
+        "B": "Poor training and testing performance",
+        "C": "Over-optimization",
+        "D": "Memorization"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Underfitting is associated with:",
+      "options": {
+        "A": "High variance",
+        "B": "High bias",
+        "C": "Regularization",
+        "D": "Noise"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "One way to fix underfitting is:",
+      "options": {
+        "A": "Reduce features",
+        "B": "Increase model complexity",
+        "C": "Reduce training time",
+        "D": "Use less data"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Underfitting means the model:",
+      "options": {
+        "A": "Learns noise",
+        "B": "Learns patterns well",
+        "C": "Fails to learn patterns",
+        "D": "Over-generalizes"
+      },
+      "answer": "C"
+    }
+  ],
+
+  "Bias vs Variance": [
+    {
+      "question": "Bias refers to:",
+      "options": {
+        "A": "Error due to complex model",
+        "B": "Error due to simple assumptions",
+        "C": "Random noise",
+        "D": "Hardware failure"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Variance refers to:",
+      "options": {
+        "A": "Error due to data scarcity",
+        "B": "Error due to sensitivity to data",
+        "C": "Error due to bias",
+        "D": "Error due to labels"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "High bias leads to:",
+      "options": {
+        "A": "Overfitting",
+        "B": "Underfitting",
+        "C": "High variance",
+        "D": "High accuracy"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "High variance leads to:",
+      "options": {
+        "A": "Underfitting",
+        "B": "Good generalization",
+        "C": "Overfitting",
+        "D": "Simple models"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "The goal is to:",
+      "options": {
+        "A": "Maximize bias",
+        "B": "Maximize variance",
+        "C": "Balance bias and variance",
+        "D": "Remove both"
+      },
+      "answer": "C"
+    }
+  ],
+
+  "Model Evaluation": [
+    {
+      "question": "Model evaluation checks:",
+      "options": {
+        "A": "Training speed",
+        "B": "Memory usage",
+        "C": "Performance on unseen data",
+        "D": "Dataset size"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which metric measures overall correctness?",
+      "options": {
+        "A": "Precision",
+        "B": "Recall",
+        "C": "Accuracy",
+        "D": "F1-score"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Precision focuses on:",
+      "options": {
+        "A": "False negatives",
+        "B": "True positives",
+        "C": "Correct positive predictions",
+        "D": "Total predictions"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Recall focuses on:",
+      "options": {
+        "A": "Identifying all actual positives",
+        "B": "Reducing false positives",
+        "C": "Increasing accuracy",
+        "D": "Reducing loss"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Cross-validation helps to:",
+      "options": {
+        "A": "Increase bias",
+        "B": "Reduce variance",
+        "C": "Improve generalization",
+        "D": "Increase training time"
+      },
+      "answer": "C"
+    }
+  ]
+}
