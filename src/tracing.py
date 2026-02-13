@@ -8,10 +8,11 @@ from typing import Any
 @contextmanager
 def trace_run(name: str, metadata: dict[str, Any] | None = None):
     """
-    Safe LangSmith tracing.
-    - Never crashes your app if tracing is misconfigured.
-    - Only enables tracing when LANGCHAIN_TRACING_V2=true.
+    Bulletproof LangSmith tracing.
+    Will NEVER crash your app.
     """
+
+    # Only trace if explicitly enabled
     if os.getenv("LANGCHAIN_TRACING_V2", "").lower() != "true":
         yield
         return
@@ -25,7 +26,6 @@ def trace_run(name: str, metadata: dict[str, Any] | None = None):
     client = None
     run_id = None
 
-    # Try to create a run
     try:
         client = Client()
         run = client.create_run(
@@ -33,19 +33,28 @@ def trace_run(name: str, metadata: dict[str, Any] | None = None):
             run_type="tool",
             inputs=metadata or {},
         )
-        # Some environments can return None; guard it
-        if run is not None and getattr(run, "id", None) is not None:
+
+        if run and hasattr(run, "id"):
             run_id = run.id
+
     except Exception:
-        # If anything fails, tracing becomes no-op
+        # Any tracing failure becomes silent
         run_id = None
 
     try:
         yield
-        # update only if we truly have a run_id
-        if client is not None and run_id is not None:
-            client.update_run(run_id=run_id, outputs={"ok": True}, error=None)
+
+        if client and run_id:
+            client.update_run(
+                run_id=run_id,
+                outputs={"ok": True},
+                error=None,
+            )
+
     except Exception as e:
-        if client is not None and run_id is not None:
-            client.update_run(run_id=run_id, error=str(e))
+        if client and run_id:
+            client.update_run(
+                run_id=run_id,
+                error=str(e),
+            )
         raise
