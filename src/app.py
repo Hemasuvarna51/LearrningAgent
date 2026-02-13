@@ -5,7 +5,6 @@ from question_generator import generate_mcqs_from_explanation
 import learning_agent
 import os
 
-
 # ============================================================
 # Page Config (MUST be first Streamlit call)
 # ============================================================
@@ -16,14 +15,14 @@ st.set_page_config(
 )
 
 # ============================================================
-# DEBUG TOGGLE (turn off later)
+# DEBUG TOGGLE
 # ============================================================
 DEBUG = True
 
 if DEBUG:
     with st.sidebar:
         st.write("AGENT FILE:", os.path.abspath(learning_agent.__file__))
-        st.write("CACHE_VERSION:", "FORCE_v999")
+        st.write("CACHE_VERSION:", "FORCE_v1000")  # bump this if needed
 
 
 # ============================================================
@@ -36,8 +35,8 @@ DEFAULTS = {
     "quiz_submitted": False,
     "last_score": None,
     "questions": None,
-    "quiz_n": 6,            # ✅ 5–10
-    "quiz_version": 0,      # ✅ forces radio reset when regenerated
+    "quiz_n": 5,           # ✅ default to 5
+    "quiz_version": 0,
 }
 
 for k, v in DEFAULTS.items():
@@ -54,7 +53,8 @@ def reset_topic_state(topic: str | None = None):
     st.session_state.quiz_submitted = False
     st.session_state.last_score = None
     st.session_state.questions = None
-    st.session_state.quiz_version += 1  # ✅ reset radios
+    st.session_state.quiz_version += 1
+    st.cache_data.clear()  # ✅ clear cached questions
 
 
 def reset_quiz_only():
@@ -63,11 +63,12 @@ def reset_quiz_only():
     st.session_state.quiz_submitted = False
     st.session_state.last_score = None
     st.session_state.questions = None
-    st.session_state.quiz_version += 1  # ✅ reset radios
+    st.session_state.quiz_version += 1
+    st.cache_data.clear()  # ✅ clear cached questions
 
 
 # ============================================================
-# Core Logic (NO caching for agent during dev)
+# Core Logic
 # ============================================================
 def run_agent(topic: str, attempt: int):
     agent = build_agent()
@@ -77,14 +78,18 @@ def run_agent(topic: str, attempt: int):
 
 @st.cache_data(show_spinner=False)
 def make_questions(explanation: str, topic: str, attempt: int, n: int):
-    # ✅ clamp to 5–10 at app level too (extra safety)
+    """
+    Cached, but we hard-slice to exact n (prevents 6 when slider is 5).
+    Cache is cleared whenever user changes topic/attempt/quiz_n via reset_*.
+    """
     n = max(5, min(10, int(n)))
-    return generate_mcqs_from_explanation(
+    qs = generate_mcqs_from_explanation(
         explanation=explanation,
         topic=topic,
         attempt=attempt,
         n=n,
     )
+    return (qs or [])[:n]  # ✅ HARD GUARANTEE EXACT n
 
 
 # ============================================================
@@ -93,22 +98,25 @@ def make_questions(explanation: str, topic: str, attempt: int, n: int):
 with st.sidebar:
     st.title("Settings")
 
-    concepts = [
-        "Machine Learning",
-        "Deep Learning",
-        "Neural Networks",
-        "Supervised Learning",
-        "Unsupervised Learning",
-        "Overfitting",
-    ]
+    CONCEPTS = [
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "Supervised Learning",
+    "Unsupervised Learning",
+    "Reinforcement Learning",
+    "Overfitting",
+    "Underfitting",
+    "Bias vs Variance",
+    "Model Evaluation",
+]
 
     selected_topic = st.selectbox(
         "Choose a Concept",
-        concepts,
-        index=concepts.index(st.session_state.current_topic),
+        CONCEPTS,
+        index=CONCEPTS.index(st.session_state.current_topic),
     )
 
-    # ✅ NEW: question count slider (5–10)
     quiz_n = st.slider(
         "No. of Questions",
         min_value=5,
@@ -120,7 +128,8 @@ with st.sidebar:
     # Apply quiz_n change
     if quiz_n != st.session_state.quiz_n:
         st.session_state.quiz_n = quiz_n
-        reset_quiz_only()  # ✅ restart quiz cleanly (prevents mixed/duplicated radios)
+        reset_quiz_only()
+        st.rerun()
 
     # Apply topic change
     if selected_topic != st.session_state.current_topic:
@@ -137,11 +146,7 @@ with st.sidebar:
 # ============================================================
 # Agent Execution
 # ============================================================
-result = run_agent(
-    st.session_state.current_topic,
-    st.session_state.attempt
-)
-
+result = run_agent(st.session_state.current_topic, st.session_state.attempt)
 context_text = result.get("context", "") or ""
 
 
@@ -187,7 +192,7 @@ if not st.session_state.quiz_active:
             st.session_state.attempt,
             st.session_state.quiz_n,
         )
-        st.session_state.quiz_version += 1  # ✅ reset radios each time quiz starts
+        st.session_state.quiz_version += 1
         st.rerun()
 
 else:
@@ -195,16 +200,21 @@ else:
 
     questions = st.session_state.questions
 
-    # ✅ Ensure we always have correct number of questions
-    if (not questions) or (len(questions) != int(st.session_state.quiz_n)):
+    # Ensure exact question count always
+    target_n = int(st.session_state.quiz_n)
+
+    if (not questions) or (len(questions) != target_n):
         questions = make_questions(
             context_text,
             st.session_state.current_topic,
             st.session_state.attempt,
-            st.session_state.quiz_n,
+            target_n,
         )
         st.session_state.questions = questions
-        st.session_state.quiz_version += 1  # ✅ forces new radio keys
+        st.session_state.quiz_version += 1
+
+    if DEBUG:
+        st.caption(f"DEBUG: quiz_n={target_n} | questions_len={len(questions) if questions else 0} | version={st.session_state.quiz_version}")
 
     with st.form("quiz_form"):
         user_answers = {}
@@ -212,7 +222,6 @@ else:
         for i, q in enumerate(questions):
             st.write(f"**Q{i+1}: {q['question']}**")
 
-            # ✅ key includes quiz_version so old selections don’t leak
             user_answers[i] = st.radio(
                 f"Select option for Q{i+1}",
                 list(q["options"].values()),

@@ -1,3 +1,5 @@
+streamlit
 langgraph
 langchain-core
 requests
+
