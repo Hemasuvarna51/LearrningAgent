@@ -6,6 +6,14 @@ import learning_agent
 import os
 import streamlit as st
 from learning_graph import build_learning_graph
+from langsmith import Client
+client = Client()
+
+import os
+
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+
 
 @st.cache_resource
 def get_graph():
