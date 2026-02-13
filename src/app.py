@@ -4,6 +4,15 @@ from learning_agent import build_agent
 from question_generator import generate_mcqs_from_explanation
 import learning_agent
 import os
+import streamlit as st
+from learning_graph import build_learning_graph
+
+@st.cache_resource
+def get_graph():
+    return build_learning_graph()
+
+graph = get_graph()
+
 
 # ============================================================
 # Page Config (MUST be first Streamlit call)

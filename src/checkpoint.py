@@ -6,12 +6,10 @@ class LearningCheckpoint:
     topic: str
     objectives: List[str] = field(default_factory=list)
     success_criteria: List[str] = field(default_factory=list)
-    
+
     def get_clean_state(self):
-        """Returns a fresh state to prevent text-looping bugs."""
         return {
             "topic": self.topic,
             "current_attempt": 1,
             "history": []
         }
-
